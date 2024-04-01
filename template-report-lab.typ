@@ -1,13 +1,6 @@
-#let demo-rect(fill: aqua, ..bodies) = {
-  let body = bodies.pos().join("\n")
-  rect(
-    fill: fill,
-    width: 100%,
-    height: 100%,
-    inset: 4pt,
-    [#body]
-  )
-}
+#let date = datetime.today().display(
+  "[day padding:space] [month repr:short] [year repr:full]"
+)
 
 #let titlepage-lange(
   title: "titlepage(title: \"title\")",
@@ -64,21 +57,22 @@
 #let conf(
   title: "Title",
   authors: (),
-  abstract: [],
+  group: 0,
+  course: "Studycourse",
+  semester: 0,
+  lecture: "Lecture",
+  date: date,
   titlepage: titlepage-lange,
   doc
 ) = {
-  let date = datetime.today().display(
-    "[day padding:space] [month repr:short] [year repr:full]"
-  )
 
   set page(
     paper: "a4",
     flipped: false,
     margin: auto,
-    columns: 2,
-    header: demo-rect[Header],
-    footer: demo-rect[Footer],
+    columns: 1,
+    header: none,
+    footer: none,
     number-align: center,
   )
 
@@ -98,41 +92,18 @@
   titlepage(
     title: title,
     authors: authors,
-    group: 2,
-    course: "Smart Systems (SMA)",
-    semester: 2,
-    lecture: "Optical Systems Lab",
+    group: group,
+    course: course,
+    semester: semester,
+    lecture: lecture,
     date: date,
-
   )
 
-  demo-rect(fill: teal)[
-    = First Heading
-    #lorem(50)
-
-    #lorem(50)
-
-    ```bash
-    git commit -m "my msg" # commit
-    ```
-
-    There are also inline code blocks: `inline`.
-
-    == FS Heading
-    #lorem(200)
-
-    == SS Heading
-    #lorem(150)
-
-    = Second Heading
-    #lorem(50)
-  ]
-
-  set align(left)
+  doc
 }
 
 #show: doc => conf(
-  title: [Template Lab Report],
+  title: [Layout Demonstration],
   authors: (
     (
       name: "Pascal Guttmann",
@@ -145,11 +116,35 @@
       email: "hfu@pascal-guttmann.de",
     ),
   ),
-  abstract: lorem(80),
+  group: -1,
+  course: "Smart Systems",
+  lecture: "Optical Systems Laboratory",
+  semester: -1,
+  date: date,
   doc,
 )
 
 = Introduction
 
 #lorem(500)
+
+= First Heading
+#lorem(50)
+
+#lorem(50)
+
+```bash
+git commit -m "my msg" # commit
+```
+
+There are also inline code blocks: `inline`.
+
+== FS Heading
+#lorem(200)
+
+== SS Heading
+#lorem(150)
+
+= Second Heading
+#lorem(50)
 
