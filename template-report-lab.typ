@@ -102,6 +102,18 @@
   )
 
   show raw: set text(font: "New Computer Modern Mono")
+  show raw.where(block: false): box.with(
+    fill: luma(240),
+    inset: (x: 3pt, y: 0pt),
+    outset: (y: 3pt),
+    radius: 2pt,
+  )
+  show raw.where(block: true): block.with(
+    width: 100%,
+    fill: luma(240),
+    inset: 1em,
+    radius: 4pt,
+  )
 
   titlepage(
     title: title,
