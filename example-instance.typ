@@ -21,20 +21,15 @@
   doc,
 )
 
-= Introduction
-// Purpose of the lab
+#include("./chapter/introduction.typ")
 
-= Theoretical Background and Method
-// Theoretical Background
+#include("./chapter/theory.typ")
 
-= Description of Instruments and Methods
-// Instruments and method
+#include("./chapter/instruments.typ")
 
-= Description of the Experiments and Results
-// Results and experiments
+#include("./chapter/results.typ")
 
-= Evaluation of the Results and Error Discussion
-// Evaluation
+#include("./chapter/evaluation.typ")
 
-= Summary and Discussion
-// Summary
+#include("./chapter/summary.typ")
+
