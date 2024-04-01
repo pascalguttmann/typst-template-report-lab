@@ -101,6 +101,11 @@
     numbering: "1."
   )
 
+  show heading.where(level: 1): it => [
+    #pagebreak(weak: true)
+    #it
+  ]
+
   show raw: set text(font: "New Computer Modern Mono")
   show raw.where(block: false): box.with(
     fill: luma(240),
