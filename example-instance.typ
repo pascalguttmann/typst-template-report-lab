@@ -15,9 +15,9 @@
       email: "e.deklan@hstate.hn",
     ),
   ),
-  abstract: lorem(80),
   doc,
 )
+
 
 = Introduction
 #lorem(90)
