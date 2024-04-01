@@ -1,0 +1,17 @@
+[package]
+name = "template-report-lab"
+version = "0.1.0"
+compiler = "0.10.0"
+entrypoint = "template-report-lab.typ"
+repository = "https://github.com/pascalguttmann/typst-template-report-lab.git"
+authors = [Pascal Guttmann]
+license = "MIT-0"
+description = "A template for lab reports of Prof. Dr. Lange"
+keywords = ["lab"]
+categories = ["report"]
+disciplines = ["computer-science", "engineering"]
+
+[template]
+path = "template"
+entrypoint = "main.typ"
+
