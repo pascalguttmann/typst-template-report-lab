@@ -54,6 +54,22 @@
   pagebreak(weak: true)
 }
 
+#let outline-contents() = {
+  show outline.entry.where(
+    level: 1
+  ): it => {
+    v(12pt, weak: true)
+    strong(it)
+  }
+
+  outline(
+    depth: 3,
+    indent: auto,
+  )
+
+  pagebreak(weak: true)
+}
+
 #let conf(
   title: "Title",
   authors: (),
@@ -76,12 +92,6 @@
     number-align: center,
   )
 
-  set par(
-    leading: 0.55em,
-    first-line-indent: 1.8em,
-    justify: true,
-  )
-
   set text(
     font: "New Computer Modern",
     size: 11pt,
@@ -97,6 +107,14 @@
     semester: semester,
     lecture: lecture,
     date: date,
+  )
+
+  outline-contents()
+
+  set par(
+    leading: 0.55em,
+    first-line-indent: 1.8em,
+    justify: true,
   )
 
   doc
@@ -129,6 +147,7 @@
 #lorem(500)
 
 = First Heading
+
 #lorem(50)
 
 #lorem(50)
@@ -142,6 +161,9 @@ There are also inline code blocks: `inline`.
 == FS Heading
 #lorem(200)
 
+=== third level heading
+==== fourth level
+==== fourth level second time
 == SS Heading
 #lorem(150)
 
