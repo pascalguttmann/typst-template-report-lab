@@ -97,6 +97,10 @@
     size: 11pt,
   )
 
+  set heading(
+    numbering: "1."
+  )
+
   show raw: set text(font: "New Computer Modern Mono")
 
   titlepage(
