@@ -1,26 +1,40 @@
-#import "template-report-lab.typ": conf
+#import "template-report-lab.typ": conf, date
 #show: doc => conf(
   title: [
-    Towards Improved Modelling
+    The Title
   ],
   authors: (
     (
-      name: "Theresa Tungsten",
-      affiliation: "Artos Institute",
-      email: "tung@artos.edu",
+      name: "Bardia Rastegar",
+      affiliation: "276035",
     ),
     (
-      name: "Eugene Deklan",
-      affiliation: "Honduras State",
-      email: "e.deklan@hstate.hn",
+      name: "Pascal Guttmann",
+      affiliation: "275358",
     ),
   ),
+  group: 1,
+  course: "Smart Systems",
+  lecture: "Optical Systems Laboratory",
+  semester: 2,
+  date: date,
   doc,
 )
 
-
 = Introduction
-#lorem(90)
+// Purpose of the lab
 
-== Motivation
-#lorem(140)
+= Theoretical Background and Method
+// Theoretical Background
+
+= Description of Instruments and Methods
+// Instruments and method
+
+= Description of the Experiments and Results
+// Results and experiments
+
+= Evaluation of the Results and Error Discussion
+// Evaluation
+
+= Summary and Discussion
+// Summary
