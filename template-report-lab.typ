@@ -139,6 +139,14 @@
   )
 
   doc
+
+  [= Literature]
+  bibliography(
+    "bibliography.bib",
+    title: none,
+    full: false,
+    style: "ieee",
+  )
 }
 
 #show: doc => conf(
