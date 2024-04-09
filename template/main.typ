@@ -13,7 +13,7 @@
       affiliation: "275358",
     ),
   ),
-  group: 1,
+  group: 1.1,
   course: "Smart Systems",
   lecture: "Optical Systems Laboratory",
   semester: 2,
