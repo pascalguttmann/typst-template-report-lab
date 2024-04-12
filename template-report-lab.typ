@@ -79,6 +79,7 @@
   lecture: "Lecture",
   date: date,
   titlepage: titlepage-lange,
+  appendix: [],
   doc
 ) = {
 
@@ -149,6 +150,13 @@
     full: false,
     style: "ieee",
   )
+
+  set heading(
+    numbering: "A.1",
+  )
+  counter(heading).update(0)
+
+  appendix
 }
 
 #show: doc => conf(

@@ -18,6 +18,7 @@
   lecture: "Optical Systems Laboratory",
   semester: 2,
   date: date,
+  appendix: include("./chapter/appendix.typ"),
   doc,
 )
 
